@@ -2,7 +2,7 @@
 
 # The MicRadar R24BBD1
 
-The R24BBD1 is a FMCW radar based on the SGRSemi SRK1101 and Artery AT32F403ACGU7 mikrocontroller.
+The R24BBD1 is a CW radar based on the Infineon BGT24**LTR11**N16 and Artery AT32F403ACGU7 mikrocontroller.
 
 It can be bought for ~10-15€ from Aliexpress or other Chinese websites.
 
