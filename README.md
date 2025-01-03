@@ -18,6 +18,7 @@ As no firmware is available and the microcontroller is rather exotic this is a b
 
 2. Get the startup scripts from [here](https://github.com/dron0gus/ChibiOS/tree/b40aca04c4e5d1c53bb53cdd96066947a3087d2b/demos/STM32/RT-AT32F435-ARTERY144)
 
+3. Pin configuration for the ST-Link was found by this [dude](https://github.com/marcnewlin/human-detector-detector)
 
 Combining both OpenOCD can connect to it without yelling at invalid identification registers.
 
