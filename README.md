@@ -254,6 +254,6 @@ Poking it with a scope showed:
 - PA5: looks like a high-pass filtered Echo signal
 - PA4: steady signal around ~1.5V
 
-As this microcontroller only supports 0V/3V3 logic 1.5V  on PA4 seems to come from the radar or analog part of the PCB. Guess it's also sampled by the ADC.
+As this microcontroller only supports 0V/3V3 logic the 1.5V  on PA4 seems to come from the radar or analog part of the PCB. Guess it's also sampled by the ADC.
 
 So no - we cannot set our own frequency modulation with this board :-(
