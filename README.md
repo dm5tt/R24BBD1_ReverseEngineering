@@ -6,7 +6,9 @@ The R24BBD1 is a FMCW radar based on the SGRSemi SRK1101 and Artery AT32F403ACGU
 
 It can be bought for ~10-15€ from Aliexpress or other Chinese websites.
 
-The big question: is the DAC of the microcontroller connected to the FMCW chip so we recycle this platform as a radar experimental platform?
+The big question: is the DAC of the microcontroller connected to the FMCW chip so we recycle this platform as a radar experimental platform? 
+
+Short: No. It's a CW radar board without the frequency modulation part.
 
 # Extracting the firmware
 
@@ -47,7 +49,7 @@ Now attempt to dump the flash
 dumped 1048576 bytes in 9.719759s (105.352 KiB/s)
 ```
 
-Once again. Successfull.
+Successful.
 
 ```
 # sha256sum flash_dump.bin
@@ -194,15 +196,14 @@ G24VD1SYV010106
 
 Lots of debug symbols. I'm thankful - but nothing mentions the DAC :-(
 
-Let's use Ghdira and the SVD file to check if there's any access going on to the DAC registers.
+Let's use Ghdira and the SVD file to check if there's any access going  to the DAC registers.
 
 ## Having a look at the DAC access using Ghdira
 
 A compatible SVD file can be found on [this](https://github.com/vadrov/AT32F403ACGU7_clone_windows_desktop_virtual_com_port/tree/main/SVD) repository, this file can be loaded with
  Ghidra SVD.
 
-
-Findings are not looking too good:
+Nope:
 
 ```
 (...)
@@ -236,7 +237,7 @@ No references to the DAC in the entire firmware blob.
 ## Looking at the pins
 
 
-Maybe there's one last hope that they just switch on a steady GPIO for CW. Lets look which options are viable (DAC1_OUT, DAC2_OUT) for us.
+Maybe there's one last hope that they just switch on a steady GPIO output for CW. Lets look which options are viable (DAC1_OUT, DAC2_OUT) for us.
 
 ![AT32F403A DAC Pin configuration](at32f403a_dac.png)
 
