@@ -20,7 +20,7 @@ As no firmware is available and the microcontroller is rather exotic this is a b
 Combining both OpenOCD can connect to it without yelling at invalid identification registers.
 
 ```
-# openocd  -f ./tcl/interface/stlink.cfg  -f  foobar.cfg 
+# openocd  -f ./tcl/interface/stlink.cfg  -f  at32f4x.cfg 
 Open On-Chip Debugger 0.12.0+dev-g85a149476 (2025-01-03-12:49)
 Licensed under GNU GPL v2
 For bug reports, read
