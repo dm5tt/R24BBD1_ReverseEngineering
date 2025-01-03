@@ -1,3 +1,5 @@
+![AT32F403A DAC Pin configuration](r24bbd1.jpg)
+
 # The MicRadar R24BBD1
 
 The R24BBD1 is a FMCW radar based on the SGRSemi SRK1101 and Artery AT32F403ACGU7.
@@ -229,7 +231,7 @@ Findings are not looking too good:
 
 ```
 
-No references to the DAC in the entire firmware blob. Not too good.
+No references to the DAC in the entire firmware blob.  
 
 ## Looking at the pins
 
@@ -241,3 +243,15 @@ Maybe there's one last hope that they just switch on a steady GPIO for CW. Lets 
 So what is PA4 and PA5 doing on the board?
 
 ![AT32F403A DAC Pin configuration](at32f403a_pins.png)
+
+And matching this to the board
+
+![AT32F403A DAC Pin configuration](at32f403a_pins_close.png)
+
+Poking it with a scope showed:
+- PA5: looks like a high-pass filtered part of the Echo signal
+- PA4: steady signal around ~1.5V
+
+As this microcontroller only supports 0V/3V3 logic 1.5V seems to come from the radar or analog part of the PCB.
+
+So no - we cannot set our own frequency modulation with this board :-(
