@@ -256,4 +256,4 @@ Poking it with a scope showed:
 
 As this microcontroller only supports 0V/3V3 logic the 1.5V  on PA4 seems to come from the radar or analog part of the PCB. Guess it's also sampled by the ADC.
 
-So no - we cannot set our own frequency modulation with this board :-(
+So no - we cannot create our own frequency modulation with this board :-(
