@@ -8,7 +8,7 @@ It can be bought for ~10-15€ from Aliexpress or other Chinese websites.
 
 The big question: is the DAC of the microcontroller connected to the FMCW chip so we recycle this platform as a radar experimental platform? 
 
-TLDR: No. It's a CW-only board without DAC access to the modulation part.
+TLDR: No. It's an extremely sensitive CW-only radar board without DAC access to the modulation part.
 
 # Extracting the firmware
 
